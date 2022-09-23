@@ -1,0 +1,290 @@
+:root {
+  --primary: #3498db;
+  --success: #34db95;
+  --danger: #ee7c7c;
+  --secondary: #acacac;
+  --light: #fff;
+  --dark: #565656;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:active,
+a:visited {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1888d3;
+}
+
+/* Button */
+.btn {
+  min-width: 130px;
+  padding: 10px 15px;
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn .icon {
+  padding-right: 5px;
+}
+
+.btn-primary {
+  border: 1px solid var(--primary);
+  background: var(--light);
+  color: var(--primary);
+  animation: ease-in 1s;
+}
+
+.btn-primary:hover,
+.btn-primary.active {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.btn-success {
+  border: 1px solid var(--success);
+  background: var(--light);
+  color: var(--success);
+  animation: ease-in 1s;
+}
+
+.btn-success:hover,
+.btn-success.active {
+  background: var(--success);
+  color: var(--light);
+}
+
+.btn-danger {
+  border: 1px solid var(--danger);
+  background: var(--light);
+  color: var(--danger);
+  animation: ease-in 1s;
+}
+
+.btn-danger:hover,
+.btn-danger.active {
+  background: var(--danger);
+  color: var(--light);
+}
+
+.btn-secondary {
+  border: 1px solid var(--secondary);
+  background: var(--light);
+  color: var(--secondary);
+  animation: ease-in 1s;
+}
+
+.btn-secondary:hover,
+.btn-secondary.active {
+  background: var(--secondary);
+  color: var(--light);
+}
+
+.App {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  color: var(--primary);
+}
+
+.header p {
+  margin-top: 10px;
+  color: var(--dark);
+}
+
+.header hr {
+  margin: 0 20px;
+  color: var(--secondary);
+}
+
+/* Navbar */
+.nav {
+  padding: 30px 0;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .nav ul li {
+    display: block;
+  }
+  .nav ul li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* SearchBar */
+.searchbar {
+  text-align: center;
+  max-width: 450px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+}
+
+/* Content */
+.content {
+  margin: 40px auto;
+}
+
+/* Notes */
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.notes-empty {
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notes .notes-card {
+  max-width: 350px;
+  min-height: 250px;
+  padding: 25px 20px;
+  background: var(--light);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.notes .notes-card:hover {
+  box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.08);
+}
+
+.notes-card .notes-card__title {
+  color: var(--primary);
+}
+
+.notes-card__body {
+  padding: 15px 0;
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.notes-card__date {
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.notes-card__action {
+  margin-top: 10px;
+  float: right;
+}
+
+.notes-card__action .btn:first-child {
+  margin-right: 5px;
+}
+
+/* Note Detail Page */
+.note-detail,
+.note-input {
+  max-width: 450px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+.note-detail__title {
+  color: var(--dark);
+}
+
+.note-detail__title p {
+  font-size: 14px;
+  color: var(--secondary);
+  margin-top: 5px;
+  line-height: 24px;
+}
+
+.note-detail .note-detail__body {
+  margin: 25px auto;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.note-detail .note-detail__action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 400px) {
+  .note-detail .note-detail__action {
+    justify-content: center;
+  }
+}
+
+/* Note Input */
+.note-input h1,
+.note-input .form-control {
+  margin-bottom: 15px;
+}
+
+.note-input .btn {
+  float: right;
+}
+
+/* Not Found Page */
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 0;
+}
+
+.not-found-page p,
+.notes-empty p {
+  margin-top: 15px;
+  color: var(--dark);
+}
